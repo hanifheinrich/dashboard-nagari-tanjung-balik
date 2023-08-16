@@ -18,7 +18,7 @@ st.write("Pilih Tahun")
 domain = st.selectbox("Pilih Statistik Tahun",['2022','2023','2024'])
 
 st.subheader ("Data Klasifikasi Sosial")
-st.text ("Lorem ipsum dolor sit amet")
+st.text ("Menyajikan klasifikasi sosial masyarakat nagari melalui bagian informasi struktur sosial")
 dataks = pd.read_csv('data/klasifikasi_sosial.csv')
 col1, col2 = st.columns([1,1])
 with col1:

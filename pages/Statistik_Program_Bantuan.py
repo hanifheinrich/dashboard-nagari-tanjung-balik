@@ -17,7 +17,13 @@ st.write("Pilih Tahun")
 domain = st.selectbox("Pilih Statistik Tahun",['2022','2023','2024'])
 
 st.subheader ("Data Program Bantuan")
-st.text ("Lorem ipsum dolor sit amet")
+st.text ("Temukan informasi lengkap tentang program bantuan yang tersedia bagi masyarakat nagari melalui bagian Program Bantuan")
 datapb = pd.read_csv('data/program_bantuan.csv')
-st.dataframe(datapb)
-st.line_chart(datapb)
+visualpb = pd.read_csv('visual/visual_program_bantuan.csv')
+col1, col2 = st.columns([1,1])
+with col1:
+  st.dataframe(datapb)
+with col2:
+  st.bar_chart(data=visualpb, x="Jenis Kelompok", y="Jumlah")
+
+
